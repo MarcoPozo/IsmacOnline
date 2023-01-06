@@ -11,21 +11,29 @@ setInterval(function () {
 
 /* Barras Circulares */
 
-let progressBar = document.querySelector(".circles__progress");
-let valueContainer = document.querySelector(".circles__value");
+let progressBarVinculacion = document.getElementById("circleProgresVinculacion");
+let valueContainerVinculacion = document.getElementById("circleValueVinculacion");
 
-console.log(progressBar, valueContainer);
+let progressBarPracticas = document.getElementById("circleProgresPracticas");
+let valueContainerPracticas = document.getElementById("circleValuePracticas");
 
-let progessValue = 0;
-let progessEndValue = 60;
-let speed = 30;
+let progressBarMaterias = document.getElementById("circleProgresMaterias");
+let valueContainerMaterias = document.getElementById("circleValueMaterias");
 
-let progess = setInterval(() => {
-  progessValue++;
-  valueContainer.textContent = `${progessValue}%`;
-  progressBar.style.background = `conic-gradient(#00a9ff ${progessValue * 3.6}deg, #00aaff33 ${progessValue * 3.6}deg)`
+const statsProgress = (progressBar, valueContainer, progessValue, progessEndValue) => {
+  let progess = setInterval(() => {
+    progessValue++;
+    valueContainer.textContent = `${progessValue}%`;
+    progressBar.style.background = `conic-gradient(#00a9ff ${
+      progessValue * 3.6
+    }deg, #00aaff33 ${progessValue * 3.6}deg)`;
 
-  if (progessValue == progessEndValue) {
-    clearInterval(progess);
-  }
-}, speed);
+    if (progessValue == progessEndValue) {
+      clearInterval(progess);
+    }
+  }, 30);
+};
+
+statsProgress(progressBarVinculacion,valueContainerVinculacion ,0, 70);
+statsProgress(progressBarPracticas,valueContainerPracticas ,0, 50);
+statsProgress(progressBarMaterias,valueContainerMaterias ,0, 60);
