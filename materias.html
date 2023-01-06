@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ismac Inline - Materias</title>
+    <!-- Normalize CSS -->
+    <link rel="stylesheet" href="css/normalize.css" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/materias.css" />
+  </head>
+  <body>
+    <header class="header">
+      <figure class="header__logo">
+        <img
+          src="images/ismacOnline.png"
+          alt="Logo ismac online"
+          class="header__img"
+        />
+      </figure>
+
+      <div class="circles">
+        <div class="circles__progress">
+          <div class="circles__value">0%</div>
+        </div>
+      </div>
+    </header>
+    <main class="hero">
+      <section class="cards">
+        <article class="card">
+          <div class="card__header">
+            <h2 class="card__periodo">Periodo I</h2>
+          </div>
+          <div class="card__materias">
+            <span class="card__materia">Logica y Algoritmos</span>
+            <span class="card__materia">Ofimatica para Desarrolladores</span>
+            <span class="card__materia"
+              >IT Essentials (Get Connected / IT Essentials)</span
+            >
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card__header">
+            <h2 class="card__periodo">Periodo II</h2>
+          </div>
+          <div class="card__materias">
+            <span class="card__materia">Programacion Orientada a Objetos</span>
+            <span class="card__materia"
+              >Sistemas Operativos de Usuario y Servidor</span
+            >
+            <span class="card__materia">Estructura y Base de Datos</span>
+            <span class="card__materia"
+              >Analisis, Diseño y Requerimiento de Software 1</span
+            >
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card__header">
+            <h2 class="card__periodo">Periodo III</h2>
+          </div>
+          <div class="card__materias">
+            <span class="card__materia"
+              >Desarrollo de Aplicaciones Web (HTML y CSS)</span
+            >
+            <span class="card__materia"
+              >Programacion de Aplicaciones Moviles</span
+            >
+            <span class="card__materia"
+              >Analisis, Diseño y Requerimiento de Software 2</span
+            >
+            <span class="card__materia">Networking (CCNA 1 y 2)</span>
+            <span class="card__materia"
+              >Electronica Digital y Programacion Domotica</span
+            >
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card__header">
+            <h2 class="card__periodo">Periodo IV</h2>
+          </div>
+          <div class="card__materias">
+            <span class="card__materia">Programacion Distribuida (Dev)</span>
+            <span class="card__materia">Seguridad Informatica</span>
+            <span class="card__materia">Big Data</span>
+            <span class="card__materia">Calidad de Software</span>
+          </div>
+        </article>
+      </section>
+      <section class="progress">
+        <h2 class="progress__title">
+          <i class="progress__icon fas fa-user-graduate"></i> Titulacion
+          <i class="progress__icon fas fa-user-graduate"></i>
+        </h2>
+        <div class="progress__bar" id="progressBar">
+          <span class="progress__progreso" id="barProgress"></span>
+        </div>
+      </section>
+    </main>
+    <!-- FontAwesome -->
+    <script
+      src="https://kit.fontawesome.com/d69c31f99a.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+  </body>
+</html>
