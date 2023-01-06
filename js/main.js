@@ -34,6 +34,6 @@ const statsProgress = (progressBar, valueContainer, progessValue, progessEndValu
   }, 30);
 };
 
-statsProgress(progressBarVinculacion,valueContainerVinculacion ,0, 70);
-statsProgress(progressBarPracticas,valueContainerPracticas ,0, 50);
+statsProgress(progressBarVinculacion,valueContainerVinculacion ,0, 4);
+statsProgress(progressBarPracticas,valueContainerPracticas ,0, 70);
 statsProgress(progressBarMaterias,valueContainerMaterias ,0, 60);
