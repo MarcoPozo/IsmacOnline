@@ -84,10 +84,10 @@ body {
   justify-content: center;
 }
 
-.header__container{
+.header__container {
   width: auto;
   height: 100%;
-  
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -132,10 +132,9 @@ body {
 
 .circles__progress {
   position: relative;
-  height: 70px;
-  width: 70px;
+  height: 50px;
+  width: 50px;
   border-radius: 50%;
-  *background-color: orange;
   box-shadow: 2px 2px 15px -5px var(--gray-color);
 
   display: grid;
@@ -153,9 +152,21 @@ body {
 
 .circles__value {
   position: relative;
-  font-size: 15px;
+  font-size: 12px;
   font-weight: 600;
   color: var(--gray-color);
+}
+
+.circles__legend {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--gray-color);
+
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  text-align: center;
+  transform: translateX(-50%);
 }
 
 /* Cards */
@@ -172,7 +183,7 @@ body {
   justify-items: center;
   grid-template-rows: 1fr;
   grid-template-columns: repeat(4, 1fr);
-  padding: 20px 0;
+  padding: 30px 0;
 }
 
 .card {
@@ -203,7 +214,7 @@ body {
 
 .card__header {
   width: 100%;
-  height: 80px;
+  height: 60px;
   border-radius: 8px 8px 0 0;
   background: var(--color-gradient-45deg);
   box-shadow: 0 5px 5px -5px var(--gray-color);
