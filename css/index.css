@@ -194,3 +194,51 @@ body {
 .card__cta:hover {
   letter-spacing: 5px;
 }
+
+@media screen and (max-width: 830px) {
+  .card {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .card {
+    width: 60%;
+    min-width: 350px;
+    grid-template-columns: 1fr;
+  }
+
+  .card__picture {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 500px){
+  .card{
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 375px){
+  .card{
+    width: 80%;
+    min-width: 300px;
+  }
+
+  .card__title{
+    font-size:1.8rem;
+  }
+
+  .card__subtitle{
+    font-size: 0.8rem;
+    word-spacing: -2px;
+  }
+
+  .card__label{
+    font-size: 16px;
+  }
+
+  .card__input{
+    font-size: 14px;
+  }
+}
