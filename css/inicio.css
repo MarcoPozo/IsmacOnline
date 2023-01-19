@@ -266,11 +266,3 @@ body {
 .section__cta:hover .section__card{
   box-shadow: 2px 2px 20px -5px var(--gray-color);
 }
-
-@media screen and (max-width: 1040px){
-  
-  .principal{
-    
-  }
-
-}
