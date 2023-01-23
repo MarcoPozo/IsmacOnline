@@ -1,9 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@100;300;400;500;700;900&display=swap");
 
 :root {
   /* Primary Colors */
   --white: #fff;
-  --black: #161617;
+  --black: #272727;
   --white-alterno: #f3f3f3;
   --gray-color: rgba(5 6 15 / 0.6);
   /* Secondary Colors */
@@ -11,6 +11,7 @@
   --color-green: #6cfacd;
   --color-celeste: #00a9ff;
   --color-celeste-dark: #356ee9;
+  --color-celeste-transparent: rgba(0, 170, 255, 0.5);
   /* Gradientes */
   --color-gradient: linear-gradient(
     var(--color-celeste-dark),
@@ -27,14 +28,28 @@
   );
 }
 
+/* Scroll Bar */
+
+::-webkit-scrollbar {
+  width: 3px;
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(175, 172, 172);
+}
+
 /* Estilos Basicos */
 
 body {
+  overflow: hidden;
+  overflow-y: scroll;
+
   width: 100vw;
   height: auto;
   min-height: 100vh;
   background-color: var(--white);
-  font-family: "Montserrat", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 img {
@@ -51,6 +66,10 @@ ul {
   padding: 0;
 }
 
+h1 {
+  margin: 0;
+}
+
 /* Header */
 
 .header {
@@ -58,10 +77,14 @@ ul {
   display: flex;
   align-items: center;
 
+  position: relative;
+  z-index: 10;
+
   width: 100%;
   height: 50px;
   padding: 0 15px;
   overflow: hidden;
+  box-shadow: 0 5px 60px -10px var(--gray-color);
 }
 
 .header__picture {
@@ -113,6 +136,7 @@ ul {
   width: auto;
   height: 100%;
   position: relative;
+  margin-right: 20px;
   margin-left: auto;
 }
 
@@ -137,8 +161,13 @@ ul {
 .navegador__link {
   width: 100%;
   height: 100%;
-  font-weight: 500;
+  font-weight: 300;
+  transition: all 300ms;
   color: var(--color-celeste);
+}
+
+.navegador__link--hover:hover {
+  color: var(--color-celeste-dark);
 }
 
 /* Navegador Iniciar Sesion */
@@ -157,7 +186,95 @@ ul {
 }
 
 .navegador__link--iniciar {
+  font-weight: 500;
   font-size: 14px;
   color: var(--white);
   text-transform: uppercase;
+}
+
+/* Main */
+
+.main {
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
+}
+
+/* Banner */
+
+.banner {
+  width: 100%;
+  height: 530px;
+  position: relative;
+  background-image: url(../images/imagenBanner.png);
+  background-position: right;
+}
+
+.banner__container {
+  width: 90%;
+  height: 100%;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr;
+}
+
+.banner__content {
+  width: 450px;
+  height: 100%;
+  padding: 50px 0;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.banner__title {
+  font-size: 80px;
+  font-weight: 400;
+  line-height: 65px;
+  margin-bottom: 16px;
+  color: var(--white);
+  font-family: "Bebas Neue", cursive;
+}
+
+.banner__paragraph {
+  font-size: 18px;
+  color: var(--white);
+  text-align: justify;
+  margin-bottom: 32px;
+  line-height: 1.5rem;
+}
+
+/* Banner Buttons */
+
+.banner__buttons {
+  gap: 30px;
+  display: flex;
+}
+
+.banner__span {
+  display: block;
+
+  font-size: 14px;
+  text-align: center;
+  margin-bottom: 8px;
+  color: var(--white);
+}
+
+.banner__cta {
+  transition: all 300ms;
+  color: var(--white);
+  width: 150px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  border-radius: 8px;
+  font-weight: 500;
+  background-color: var(--black);
+}
+
+.banner__cta--border {
+  background-color: transparent;
+  border: 2px solid var(--black);
 }
