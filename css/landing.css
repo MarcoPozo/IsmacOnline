@@ -26,6 +26,19 @@
     #00d6ee,
     #6cfacd
   );
+  /* Colores Carreras */
+  --color-desarrollo: #0d3996;
+  --color-mecanica: #890f23;
+  --color-enfermeria: #bed62f;
+  --color-marketing: #fd7f27;
+  --color-tributacion: #b57913;
+  --color-comercio: #383578;
+  --color-gastronomia: #fe2708;
+  --color-administracion: #0d8b9b;
+  --color-electro: #6d6d6c;
+  --color-turismo: #b6b216;
+  --color-dietetica: #43b2a9;
+  --color-hoteleria: #008435;
 }
 
 /* Scroll Bar */
@@ -48,6 +61,7 @@ body {
   width: 100vw;
   height: auto;
   min-height: 100vh;
+  color: var(--black);
   background-color: var(--white);
   font-family: "Roboto", sans-serif;
 }
@@ -68,6 +82,11 @@ ul {
 
 h1 {
   margin: 0;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
 }
 
 /* Header */
@@ -288,21 +307,18 @@ h1 {
   min-height: 150px;
 }
 
-.convenios__container{
-  width: 90%;
+.convenios__container {
   height: 100%;
-  margin: 0 auto;
 }
 
-.convenios__title{
+.convenios__title {
   font-size: 18px;
   font-weight: 500;
   text-align: center;
   margin-bottom: 20px;
-  color: var(--black);
 }
 
-.convenios__acreditaciones{
+.convenios__acreditaciones {
   width: 100%;
   height: auto;
   display: flex;
@@ -310,7 +326,7 @@ h1 {
   justify-content: space-evenly;
 }
 
-.convenios__picture{
+.convenios__picture {
   width: 180px;
   height: 100px;
 
@@ -319,6 +335,131 @@ h1 {
   justify-content: center;
 }
 
-.convenios__img{
+.convenios__img {
   width: 100%;
+}
+
+/* Carreras */
+
+.carreras {
+  width: 100%;
+  height: auto;
+  min-height: 600px;
+
+  padding: 56px 0 80px;
+}
+
+.carreras__container {
+  height: 100%;
+}
+
+.carreras__title {
+  height: 40px;
+  font-weight: 900;
+  line-height: 40px;
+  text-align: center;
+  margin-bottom: 19px;
+}
+
+.carreras__paragraph {
+  font-size: 18px;
+  font-weight: 400;
+  text-align: center;
+}
+
+/* Carreras Cards */
+
+.carreras__grid {
+  width: 100%;
+  min-height: 100%;
+  padding-top: 32px;
+
+  gap: 1.5rem;
+  display: grid;
+  grid-auto-rows: 105px;
+  grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
+}
+
+.carreras__card {
+  width: 100%;
+  height: 100%;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 0 2px var(--black);
+
+  display: flex;
+  background-color: var(--color-desarrollo);
+}
+
+.carreras__card:nth-of-type(2) {
+  background-color: var(--color-mecanica);
+}
+
+.carreras__card:nth-of-type(3) {
+  background-color: var(--color-enfermeria);
+}
+
+.carreras__card:nth-of-type(4) {
+  background-color: var(--color-marketing);
+}
+
+.carreras__card:nth-of-type(5) {
+  background-color: var(--color-tributacion);
+}
+
+.carreras__card:nth-of-type(6) {
+  background-color: var(--color-comercio);
+}
+
+.carreras__card:nth-of-type(7) {
+  background-color: var(--color-gastronomia);
+}
+
+.carreras__card:nth-of-type(8) {
+  background-color: var(--color-administracion);
+}
+
+.carreras__card:nth-of-type(9) {
+  background-color: var(--color-electro);
+}
+
+.carreras__card:nth-of-type(10) {
+  background-color: var(--color-turismo);
+}
+
+.carreras__card:nth-of-type(11) {
+  background-color: var(--color-dietetica);
+}
+
+.carreras__card:nth-of-type(12) {
+  background-color: var(--color-hoteleria);
+}
+
+.carreras__picture {
+  width: 80px;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carreras__img {
+  margin-right: 12px;
+}
+
+.carreras__description {
+  width: 100%;
+  height: 100%;
+  color: var(--white);
+
+  gap: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.carreras__legend{
+  font-size: 14px;
+  font-weight: 400;
 }
