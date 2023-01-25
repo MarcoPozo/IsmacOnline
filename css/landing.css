@@ -405,47 +405,23 @@ h1 {
 }
 
 .carreras__card:nth-of-type(2) {
-  background-color: var(--color-mecanica);
-}
-
-.carreras__card:nth-of-type(3) {
-  background-color: var(--color-enfermeria);
-}
-
-.carreras__card:nth-of-type(4) {
   background-color: var(--color-marketing);
 }
 
-.carreras__card:nth-of-type(5) {
+.carreras__card:nth-of-type(3) {
   background-color: var(--color-tributacion);
 }
 
-.carreras__card:nth-of-type(6) {
+.carreras__card:nth-of-type(4) {
   background-color: var(--color-comercio);
 }
 
-.carreras__card:nth-of-type(7) {
-  background-color: var(--color-gastronomia);
-}
-
-.carreras__card:nth-of-type(8) {
+.carreras__card:nth-of-type(5) {
   background-color: var(--color-administracion);
 }
 
-.carreras__card:nth-of-type(9) {
-  background-color: var(--color-electro);
-}
-
-.carreras__card:nth-of-type(10) {
+.carreras__card:nth-of-type(6) {
   background-color: var(--color-turismo);
-}
-
-.carreras__card:nth-of-type(11) {
-  background-color: var(--color-dietetica);
-}
-
-.carreras__card:nth-of-type(12) {
-  background-color: var(--color-hoteleria);
 }
 
 .carreras__picture {
