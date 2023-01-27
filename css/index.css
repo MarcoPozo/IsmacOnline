@@ -1,23 +1,24 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@100;300;400;500;700;900&display=swap");
 
 :root {
   /* Primary Colors */
   --white: #fff;
-  --black: #000;
+  --black: #272727;
+  --white-alterno: #f3f3f3;
   --gray-color: rgba(5 6 15 / 0.6);
   /* Secondary Colors */
   --color-cyan: #00d6ee;
   --color-green: #6cfacd;
   --color-celeste: #00a9ff;
   --color-celeste-dark: #356ee9;
-  /* Gradiente */
+  --color-celeste-transparent: rgba(0, 170, 255, 0.5);
+  /* Gradientes */
   --color-gradient: linear-gradient(
     var(--color-celeste-dark),
     var(--color-celeste),
     var(--color-cyan),
     var(--color-green)
   );
-
   --color-gradient-45deg: linear-gradient(
     45deg,
     #356ee9,
@@ -25,6 +26,44 @@
     #00d6ee,
     #6cfacd
   );
+  /* Colores Carreras */
+  --color-desarrollo: #0d3996;
+  --color-mecanica: #890f23;
+  --color-enfermeria: #bed62f;
+  --color-marketing: #fd7f27;
+  --color-tributacion: #b57913;
+  --color-comercio: #383578;
+  --color-gastronomia: #fe2708;
+  --color-administracion: #0d8b9b;
+  --color-electro: #6d6d6c;
+  --color-turismo: #b6b216;
+  --color-dietetica: #43b2a9;
+  --color-hoteleria: #008435;
+}
+
+/* Scroll Bar */
+
+::-webkit-scrollbar {
+  width: 3px;
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(175, 172, 172);
+}
+
+/* Estilos Basicos */
+
+body {
+  overflow: hidden;
+  overflow-y: scroll;
+
+  width: 100vw;
+  height: auto;
+  min-height: 100vh;
+  color: var(--black);
+  background-color: var(--white);
+  font-family: "Roboto", sans-serif;
 }
 
 img {
@@ -32,213 +71,389 @@ img {
 }
 
 a {
+  display: block;
   text-decoration: none;
 }
 
-body {
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
-
-  min-height: 100vh;
-  background: var(--color-gradient);
-  font-family: "Montserrat", sans-serif;
+ul {
+  list-style: none;
+  padding: 0;
 }
 
-/* Login Page */
-
-.principal {
-  width: 100%;
-  height: 100vh;
-  position: relative;
+h1 {
+  margin: 0;
 }
 
 .container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* Header */
+
+.header {
+  gap: 25px;
+  display: flex;
+  align-items: center;
+
+  position: relative;
+  z-index: 10;
+
   width: 100%;
-  height: 100vh;
+  height: 50px;
+  padding: 0 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 60px -10px var(--gray-color);
+}
+
+.header__picture {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100px;
+  height: 100%;
+  overflow: hidden;
+}
+
+.header__logo {
+  width: 100%;
+}
+
+/* Header Buscador */
+
+.header__buscador {
+  position: relative;
+  width: auto;
+  height: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header__lupa {
+  position: absolute;
+  left: 12px;
+  color: var(--color-celeste);
+}
+
+.header__input {
+  height: 35px;
+  border: none;
+  outline: none;
+  min-width: 250px;
+  font-size: 0.8rem;
+  text-indent: 2rem;
+  border-radius: 8px;
+  color: var(--gray-color);
+  border: 1px solid var(--color-celeste);
+}
+
+/* Navegador */
+
+.navegador {
+  width: auto;
+  height: 100%;
+  position: relative;
+  margin-right: 20px;
+  margin-left: auto;
+}
+
+.navegador__items {
+  width: auto;
+  height: 100%;
+
+  gap: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.navegador__item {
+  width: auto;
+  height: 30px;
+  cursor: pointer;
+  min-width: 80px;
+  line-height: 30px;
+  text-align: center;
+}
+
+.navegador__link {
+  width: 100%;
+  height: 100%;
+  font-weight: 300;
+  transition: all 300ms;
+  color: var(--color-celeste);
+}
+
+.navegador__link--hover:hover {
+  color: var(--color-celeste-dark);
+}
+
+/* Navegador Iniciar Sesion */
+
+.navegador__item--iniciar {
+  transition: all 300ms;
+  height: 35px;
+  min-width: 150px;
+  line-height: 35px;
+  border-radius: 8px;
+  background-color: var(--color-celeste);
+}
+
+.navegador__item--iniciar:hover {
+  background-color: var(--color-celeste-dark);
+}
+
+.navegador__link--iniciar {
+  font-weight: 500;
+  font-size: 14px;
+  color: var(--white);
+  text-transform: uppercase;
+}
+
+/* Main */
+
+.main {
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
+}
+
+/* Banner */
+
+.banner {
+  width: 100%;
+  height: 530px;
+  position: relative;
+  background-image: url(../images/imagenBanner.png);
+  background-position: right;
+}
+
+.banner__container {
+  width: 90%;
+  height: 100%;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr;
+}
+
+.banner__content {
+  width: 450px;
+  height: 100%;
+  padding: 50px 0;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.banner__title {
+  font-size: 80px;
+  font-weight: 400;
+  line-height: 65px;
+  margin-bottom: 16px;
+  color: var(--white);
+  font-family: "Bebas Neue", cursive;
+}
+
+.banner__paragraph {
+  font-size: 18px;
+  color: var(--white);
+  text-align: justify;
+  margin-bottom: 32px;
+  line-height: 1.5rem;
+}
+
+/* Banner Buttons */
+
+.banner__buttons {
+  gap: 30px;
+  display: flex;
+}
+
+.banner__span {
+  display: block;
+
+  font-size: 14px;
+  text-align: center;
+  margin-bottom: 8px;
+  color: var(--white);
+}
+
+.banner__cta {
+  transition: all 300ms;
+  color: var(--white);
+  width: 150px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  border-radius: 8px;
+  font-weight: 500;
+  background-color: var(--black);
+}
+
+.banner__cta--border {
+  background-color: transparent;
+  border: 2px solid var(--black);
+}
+
+/* Convenios */
+
+.convenios {
+  width: 100%;
+  height: 150px;
+  margin-top: 40px;
+  min-height: 150px;
+}
+
+.convenios__container {
+  height: 100%;
+}
+
+.convenios__title {
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.convenios__acreditaciones {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.convenios__picture {
+  width: 180px;
+  height: 100px;
 
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.card {
-  width: 800px;
-  height: 450px;
-  overflow: hidden;
-  border-radius: 8px;
-  box-shadow: 5px 5px 60px 8px var(--gray-color);
-
-  display: grid;
-  grid-template-rows: 1fr;
-  grid-template-columns: 1fr 1fr;
-}
-
-.card__picture,
-.card__form {
+.convenios__img {
   width: 100%;
-  height: 100%;
 }
 
-.card__picture {
-  background-size: cover;
-  background-position: center;
-  background-image: url("../images/fondoSoftware.jpg");
-}
+/* Carreras */
 
-.card__form {
-  padding: 20px;
-  background-color: var(--white);
-}
-
-.card__title {
-  font-weight: 800;
-  font-size: 2.2rem;
-  margin: 0;
-  margin-top: 30px;
-  text-align: center;
-  letter-spacing: 2px;
-  font-variant: small-caps;
-  color: var(--gray-color);
-  text-transform: uppercase;
-}
-
-.card__subtitle {
-  text-align: center;
-  font-size: 14px;
-  font-weight: 500;
-  margin: 10px 0 30px 0;
-  color: var(--gray-color);
-}
-
-.card__register {
-  font-weight: 600;
-  transition: all 300ms;
-  color: var(--color-celeste-dark);
-}
-
-.card__register:hover {
-  color: var(--color-cyan);
-}
-
-.card__item {
+.carreras {
   width: 100%;
   height: auto;
-  min-height: 70px;
-  margin-bottom: 15px;
+  min-height: 550px;
+
+  padding: 56px 0 80px;
 }
 
-.card__label {
-  font-weight: 700;
-  font-size: 18px;
-  color: var(--gray-color);
+.carreras__container {
+  height: 100%;
 }
 
-.card__group {
+.carreras__title {
   position: relative;
-  width: 100%;
+  font-size: 2rem;
+  font-weight: 900;
+  padding-top: 24px;
+  line-height: 3rem;
+  text-align: center;
+  margin-bottom: 19px;
 }
 
-.card__icon {
+.carreras__title::after {
+  content: "";
+  width: 100px;
+  height: 2px;
+  background-color: var(--color-celeste);
   position: absolute;
-  top: 50%;
-  right: 15px;
-  cursor: pointer;
-  transform: translateY(-50%);
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
-.card__input {
+.carreras__paragraph {
+  font-size: 18px;
+  font-weight: 400;
+  text-align: center;
+}
+
+/* Carreras Cards */
+
+.carreras__grid {
   width: 100%;
-  height: 40px;
-  outline: none;
-  margin: 8px 0;
-  display: block;
-  font-weight: 500;
-  font-size: 15px;
-  border-radius: 8px;
-  text-indent: 0.5rem;
-  color: var(--gray-color);
-  border: 2px solid var(--gray-color);
+  min-height: 100%;
+  padding-top: 32px;
+
+  gap: 1.5rem;
+  display: grid;
+  grid-auto-rows: 105px;
+  grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
+}
+
+.carreras__card {
   transition: all 300ms;
-}
-
-.card__input:hover,
-.card__input:focus {
-  border: 2px solid var(--color-cyan);
-}
-
-.card__item--cta {
-  width: 100%;
-  height: 50px;
-  min-height: 50px;
-  margin-top: 40px;
-}
-
-.card__cta {
-  display: block;
   width: 100%;
   height: 100%;
-  line-height: 50px;
-  font-weight: 700;
-  font-size: 1.3rem;
-  text-align: center;
+  padding: 15px;
   border-radius: 8px;
-  letter-spacing: 2px;
+  box-shadow: 0 0 2px var(--black);
+
+  display: flex;
+  background-color: var(--color-desarrollo);
+}
+
+.carreras__card:nth-of-type(2) {
+  background-color: var(--color-marketing);
+}
+
+.carreras__card:nth-of-type(3) {
+  background-color: var(--color-tributacion);
+}
+
+.carreras__card:nth-of-type(4) {
+  background-color: var(--color-comercio);
+}
+
+.carreras__card:nth-of-type(5) {
+  background-color: var(--color-administracion);
+}
+
+.carreras__card:nth-of-type(6) {
+  background-color: var(--color-turismo);
+}
+
+.carreras__card:hover {
+  filter: brightness(80%);
+}
+
+.carreras__picture {
+  width: 80px;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carreras__img {
+  margin-right: 12px;
+}
+
+.carreras__description {
+  width: 100%;
+  height: 100%;
   color: var(--white);
-  transition: all 300ms;
-  text-transform: uppercase;
-  box-shadow: 5px 5px 20px -5px var(--gray-color);
-  background: var(--color-gradient-45deg);
+
+  gap: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.card__cta:hover {
-  letter-spacing: 5px;
-}
-
-@media screen and (max-width: 830px) {
-  .card {
-    width: 90%;
-  }
-}
-
-@media screen and (max-width: 680px) {
-  .card {
-    width: 60%;
-    min-width: 350px;
-    grid-template-columns: 1fr;
-  }
-
-  .card__picture {
-    display: none;
-  }
-}
-
-@media screen and (max-width: 500px){
-  .card{
-    width: 80%;
-  }
-}
-
-@media screen and (max-width: 375px){
-  .card{
-    width: 80%;
-    min-width: 300px;
-  }
-
-  .card__title{
-    font-size:1.8rem;
-  }
-
-  .card__subtitle{
-    font-size: 0.8rem;
-    word-spacing: -2px;
-  }
-
-  .card__label{
-    font-size: 16px;
-  }
-
-  .card__input{
-    font-size: 14px;
-  }
+.carreras__legend {
+  font-size: 14px;
+  font-weight: 400;
 }

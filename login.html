@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ismac Online - Login</title>
+    <!-- Normalize CSS -->
+    <link rel="stylesheet" href="css/normalize.css" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/login.css" />
+  </head>
+  <body>
+    <main class="principal">
+      <section class="container">
+        <article class="card">
+          <figure class="card__picture"></figure>
+          <form class="card__form" autocomplete="off">
+            <h1 class="card__title">Bienvenido</h1>
+            <h3 class="card__subtitle">
+              ¿No tienes cuenta?
+              <a href="#" class="card__register">Registrate</a>
+            </h3>
+            <div class="card__item">
+              <label class="card__label" for="email">
+                Email
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  class="card__input"
+                  placeholder="nombre@ejemplo.com"
+                />
+              </label>
+            </div>
+
+            <div class="card__item">
+              <label class="card__label" for="password">
+                Contraseña
+                <div class="card__group">
+                  <input type="password" id="password" class="card__input" />
+                  <i class="card__icon fas fa-eye"></i>
+                </div>
+              </label>
+            </div>
+
+            <div class="card__item--cta">
+              <a href="inicio.html" class="card__cta">Login</a>
+            </div>
+          </form>
+        </article>
+      </section>
+    </main>
+    <!-- FontAwesome -->
+    <script
+      src="https://kit.fontawesome.com/d69c31f99a.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

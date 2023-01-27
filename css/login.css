@@ -1,0 +1,244 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700;800;900&display=swap");
+
+:root {
+  /* Primary Colors */
+  --white: #fff;
+  --black: #000;
+  --gray-color: rgba(5 6 15 / 0.6);
+  /* Secondary Colors */
+  --color-cyan: #00d6ee;
+  --color-green: #6cfacd;
+  --color-celeste: #00a9ff;
+  --color-celeste-dark: #356ee9;
+  /* Gradiente */
+  --color-gradient: linear-gradient(
+    var(--color-celeste-dark),
+    var(--color-celeste),
+    var(--color-cyan),
+    var(--color-green)
+  );
+
+  --color-gradient-45deg: linear-gradient(
+    45deg,
+    #356ee9,
+    #00a9ff,
+    #00d6ee,
+    #6cfacd
+  );
+}
+
+img {
+  display: block;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+
+  min-height: 100vh;
+  background: var(--color-gradient);
+  font-family: "Montserrat", sans-serif;
+}
+
+/* Login Page */
+
+.principal {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  width: 800px;
+  height: 450px;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 5px 5px 60px 8px var(--gray-color);
+
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr;
+}
+
+.card__picture,
+.card__form {
+  width: 100%;
+  height: 100%;
+}
+
+.card__picture {
+  background-size: cover;
+  background-position: center;
+  background-image: url("../images/fondoSoftware.jpg");
+}
+
+.card__form {
+  padding: 20px;
+  background-color: var(--white);
+}
+
+.card__title {
+  font-weight: 800;
+  font-size: 2.2rem;
+  margin: 0;
+  margin-top: 30px;
+  text-align: center;
+  letter-spacing: 2px;
+  font-variant: small-caps;
+  color: var(--gray-color);
+  text-transform: uppercase;
+}
+
+.card__subtitle {
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+  margin: 10px 0 30px 0;
+  color: var(--gray-color);
+}
+
+.card__register {
+  font-weight: 600;
+  transition: all 300ms;
+  color: var(--color-celeste-dark);
+}
+
+.card__register:hover {
+  color: var(--color-cyan);
+}
+
+.card__item {
+  width: 100%;
+  height: auto;
+  min-height: 70px;
+  margin-bottom: 15px;
+}
+
+.card__label {
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--gray-color);
+}
+
+.card__group {
+  position: relative;
+  width: 100%;
+}
+
+.card__icon {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  cursor: pointer;
+  transform: translateY(-50%);
+}
+
+.card__input {
+  width: 100%;
+  height: 40px;
+  outline: none;
+  margin: 8px 0;
+  display: block;
+  font-weight: 500;
+  font-size: 15px;
+  border-radius: 8px;
+  text-indent: 0.5rem;
+  color: var(--gray-color);
+  border: 2px solid var(--gray-color);
+  transition: all 300ms;
+}
+
+.card__input:hover,
+.card__input:focus {
+  border: 2px solid var(--color-cyan);
+}
+
+.card__item--cta {
+  width: 100%;
+  height: 50px;
+  min-height: 50px;
+  margin-top: 40px;
+}
+
+.card__cta {
+  display: block;
+  width: 100%;
+  height: 100%;
+  line-height: 50px;
+  font-weight: 700;
+  font-size: 1.3rem;
+  text-align: center;
+  border-radius: 8px;
+  letter-spacing: 2px;
+  color: var(--white);
+  transition: all 300ms;
+  text-transform: uppercase;
+  box-shadow: 5px 5px 20px -5px var(--gray-color);
+  background: var(--color-gradient-45deg);
+}
+
+.card__cta:hover {
+  letter-spacing: 5px;
+}
+
+@media screen and (max-width: 830px) {
+  .card {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .card {
+    width: 60%;
+    min-width: 350px;
+    grid-template-columns: 1fr;
+  }
+
+  .card__picture {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 500px){
+  .card{
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 375px){
+  .card{
+    width: 80%;
+    min-width: 300px;
+  }
+
+  .card__title{
+    font-size:1.8rem;
+  }
+
+  .card__subtitle{
+    font-size: 0.8rem;
+    word-spacing: -2px;
+  }
+
+  .card__label{
+    font-size: 16px;
+  }
+
+  .card__input{
+    font-size: 14px;
+  }
+}
