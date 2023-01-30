@@ -562,8 +562,8 @@ h1 {
   padding: 16px;
   border-radius: 8px;
   color: var(--white);
-  background-color: var(--color-celeste);
-  border: 1px solid var(--black);
+  background-color: var(--color-celeste-dark);
+  border: 1px solid var(--black5);
   box-shadow: 5px 5px 10px -5px var(--gray-color);
 }
 
