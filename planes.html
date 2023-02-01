@@ -11,98 +11,302 @@
     <link rel="stylesheet" href="css/planes.css" />
   </head>
   <body>
-    <main class="principal">
-      <div class="principal__gradient"></div>
-      <section class="container">
-        <article class="container__card">
-          <figure class="container__picture">
-            <img
-              src="https://s22.postimg.cc/8mv5gn7w1/paper-plane.png"
-              alt="Imagen plan basico"
-              class="container__img"
-            />
-          </figure>
+    <!-- Basic Header -->
+    <header class="header">
+      <div class="header__container">
+        <figure class="header__logo">
+          <img
+            src="images/ismacOnline.png"
+            alt="Logo ismac online"
+            class="header__img"
+          />
+        </figure>
 
-          <div class="container__texts">
-            <h2 class="container__title">Basico</h2>
-
-            <ul class="container__caracteristicas">
-              <li class="container__caracteristica">Acceso ilimitado</li>
-
-              <li class="container__caracteristica">1 año</li>
-
-              <li class="container__caracteristica">Tutorias</li>
-
-              <li
-                class="container__caracteristica container__caracteristica--price"
-              >
-                $ 100
+        <div class="header__buttons">
+          <a href="#" class="header__cta header__cta--iniciar"
+            >Iniciar Sesión</a
+          >
+          <a href="#" class="header__cta header__cta--registrar">Registrate</a>
+        </div>
+      </div>
+    </header>
+    <!-- Main -->
+    <main class="main">
+      <!-- Planes -->
+      <section class="planes container">
+        <div class="planes__tipos">
+          <div class="planes__fichas">
+            <button class="planes__ficha planes__ficha--active">
+              <i class="planes__icon fas fa-user-astronaut"></i>
+              Personal</button
+            ><button class="planes__ficha">
+              <i class="planes__icon fas fa-rocket"></i> Empresas
+            </button>
+          </div>
+        </div>
+      </section>
+      <!-- Cards -->
+      <section class="cards container">
+        <div class="cards__container">
+          <!-- Card 1 -->
+          <article class="cards__card">
+            <!-- Card Info -->
+            <div class="cards__info">
+              <div class="cards__content">
+                <div class="cards__plan">
+                  <div class="cards__price">
+                    <h3 class="cards__title">Expert</h3>
+                    <span class="cards__time">Anual</span>
+                  </div>
+                  <strong class="cards__strong">1 persona</strong>
+                </div>
+              </div>
+              <i class="cards__icon fas fa-user"></i>
+            </div>
+            <!-- Precios -->
+            <div class="cards__precios">
+              <div class="cards__cotizacion">
+                <div class="cards__precio">
+                  <figure class="cards__flag">
+                    <img
+                      src="https://static.platzi.com/media/flags/US.png"
+                      alt="Image Flag"
+                      class="cards__img"
+                    />
+                  </figure>
+                  <p class="cards__value">
+                    $17<em class="cards__value--enfasis">/mes</em>
+                  </p>
+                </div>
+                <p class="cards__recurrente">
+                  Un pago anual recurrente de
+                  <strong class="cards__recurrente--strong">$199</strong>
+                </p>
+              </div>
+              <a href="#" class="cards__button">Suscribete a expert</a>
+              <div class="cards__beneficios">
+                <figure class="cards__circle">
+                  <img src="images/circle.svg" alt="" class="cards__grafico" />
+                </figure>
+                <div class="cards__promocion">
+                  <p class="cards__paragraph">
+                    Paga a 2 cuotas
+                    <strong class="cards__paragraph--strong"
+                      >sin intereses</strong
+                    >
+                    de
+                    <strong class="cards__paragraph--strong">$100 USD</strong>
+                    con tarjeta débito o crédito.
+                  </p>
+                  <a href="#" class="cards__cta">Conoce más.</a>
+                </div>
+              </div>
+            </div>
+            <!-- Caracteristicas -->
+            <ul class="cards__caracteristicas">
+              <li class="cards__item">
+                <i class="cards__check fas fa-check"></i>
+                <p class="card__text">Eventos exclusivos en Ismac Online</p>
+              </li>
+              <li class="cards__item">
+                <i class="cards__check fas fa-check"></i>
+                <p class="card__text">Más de 1000 cursos y 21 escuelas</p>
+              </li>
+              <li class="cards__item">
+                <i class="cards__check fas fa-check"></i>
+                <p class="card__text">
+                  Certificado digital de cursos y escuelas
+                </p>
+              </li>
+              <li class="cards__item">
+                <i class="cards__check fas fa-check"></i>
+                <p class="card__text">
+                  Certificados físicos para rutas de perfil profesional
+                </p>
+              </li>
+              <li class="cards__item">
+                <i class="cards__check fas fa-check"></i>
+                <p class="card__text">English Academy y Escuela de Startups</p>
+              </li>
+              <li class="cards__item">
+                <i class="cards__check fas fa-check"></i>
+                <p class="card__text">Descarga clases en la App</p>
               </li>
             </ul>
-
-            <a href="#" class="container__cta">Obtener</a>
-          </div>
-        </article>
-
-        <article class="container__card container__card--focus">
-          <figure class="container__picture">
-            <img
-              src="https://s28.postimg.cc/ju5bnc3x9/plane.png"
-              alt="Imagen plan plus"
-              class="container__img"
-            />
-          </figure>
-
-          <div class="container__texts">
-            <h2 class="container__title">Plus</h2>
-
-            <ul class="container__caracteristicas">
-              <li class="container__caracteristica">Acceso ilimitado</li>
-
-              <li class="container__caracteristica">2 años</li>
-
-              <li class="container__caracteristica">Tutorias</li>
-
-              <li
-                class="container__caracteristica container__caracteristica--price"
-              >
-                $ 200
+          </article>
+          <!-- Card 2 -->
+          <article class="cards__card cards__card--popular">
+            <!-- Card Info -->
+            <div class="cards__info">
+              <div class="cards__content">
+                <div class="cards__plan">
+                  <div class="cards__price">
+                    <h3 class="cards__title">Expert Duo</h3>
+                    <span class="cards__time">Anual</span>
+                  </div>
+                  <strong class="cards__strong">2 personas</strong>
+                </div>
+              </div>
+              <i class="cards__icon fas fa-user-friends"></i>
+            </div>
+            <!-- Precios -->
+            <div class="cards__precios">
+              <div class="cards__cotizacion">
+                <div class="cards__precio">
+                  <figure class="cards__flag">
+                    <img
+                      src="https://static.platzi.com/media/flags/US.png"
+                      alt="Image Flag"
+                      class="cards__img"
+                    />
+                  </figure>
+                  <p class="cards__value">
+                    $22<em class="cards__value--enfasis">/mes</em>
+                  </p>
+                </div>
+                <p class="cards__recurrente">
+                  Un pago anual recurrente de
+                  <strong class="cards__recurrente--strong">$259</strong>
+                </p>
+              </div>
+              <a href="#" class="cards__button cards__button--color">Suscribete a expert duo</a>
+              <div class="cards__beneficios">
+                <figure class="cards__circle">
+                  <img src="images/circle.svg" alt="" class="cards__grafico" />
+                </figure>
+                <div class="cards__promocion">
+                  <p class="cards__paragraph">
+                    Paga a 2 cuotas
+                    <strong class="cards__paragraph--strong"
+                      >sin intereses</strong
+                    >
+                    de
+                    <strong class="cards__paragraph--strong">$130 USD</strong>
+                    con tarjeta débito o crédito.
+                  </p>
+                  <a href="#" class="cards__cta">Conoce más.</a>
+                </div>
+              </div>
+            </div>
+            <!-- Caracteristicas -->
+            <ul class="cards__caracteristicas">
+              <li class="cards__item">
+                <i class="cards__check fas fa-check"></i>
+                <p class="card__text">Eventos exclusivos en Ismac Online</p>
+              </li>
+              <li class="cards__item">
+                <i class="cards__check fas fa-check"></i>
+                <p class="card__text">Más de 1000 cursos y 21 escuelas</p>
+              </li>
+              <li class="cards__item">
+                <i class="cards__check fas fa-check"></i>
+                <p class="card__text">
+                  Certificado digital de cursos y escuelas
+                </p>
+              </li>
+              <li class="cards__item">
+                <i class="cards__check fas fa-check"></i>
+                <p class="card__text">
+                  Certificados físicos para rutas de perfil profesional
+                </p>
+              </li>
+              <li class="cards__item">
+                <i class="cards__check fas fa-check"></i>
+                <p class="card__text">English Academy y Escuela de Startups</p>
+              </li>
+              <li class="cards__item">
+                <i class="cards__check fas fa-check"></i>
+                <p class="card__text">Descarga clases en la App</p>
               </li>
             </ul>
-
-            <a href="#" class="container__cta">Obtener</a>
-          </div>
-        </article>
-
-        <article class="container__card">
-          <figure class="container__picture">
-            <img
-              src="https://s21.postimg.cc/tpm0cge4n/space-ship.png"
-              alt="Imagen plan pro"
-              class="container__img"
-            />
-          </figure>
-
-          <div class="container__texts">
-            <h2 class="container__title">Pro</h2>
-
-            <ul class="container__caracteristicas">
-              <li class="container__caracteristica">Acceso ilimitado</li>
-
-              <li class="container__caracteristica">3 años</li>
-
-              <li class="container__caracteristica">Tutorias</li>
-
-              <li
-                class="container__caracteristica container__caracteristica--price"
-              >
-                $ 300
+          </article>
+          <!-- Card 3 -->
+          <article class="cards__card">
+            <!-- Card Info -->
+            <div class="cards__info">
+              <div class="cards__content">
+                <div class="cards__plan">
+                  <div class="cards__price">
+                    <h3 class="cards__title">Expert Family</h3>
+                    <span class="cards__time">Anual</span>
+                  </div>
+                  <strong class="cards__strong">4 personas</strong>
+                </div>
+              </div>
+              <i class="cards__icon fas fa-users"></i>
+            </div>
+            <!-- Precios -->
+            <div class="cards__precios">
+              <div class="cards__cotizacion">
+                <div class="cards__precio">
+                  <figure class="cards__flag">
+                    <img
+                      src="https://static.platzi.com/media/flags/US.png"
+                      alt="Image Flag"
+                      class="cards__img"
+                    />
+                  </figure>
+                  <p class="cards__value">
+                    $34<em class="cards__value--enfasis">/mes</em>
+                  </p>
+                </div>
+                <p class="cards__recurrente">
+                  Un pago anual recurrente de
+                  <strong class="cards__recurrente--strong">$399</strong>
+                </p>
+              </div>
+              <a href="#" class="cards__button">Suscribete a expert</a>
+              <div class="cards__beneficios">
+                <figure class="cards__circle">
+                  <img src="images/circle.svg" alt="" class="cards__grafico" />
+                </figure>
+                <div class="cards__promocion">
+                  <p class="cards__paragraph">
+                    Paga a 2 cuotas
+                    <strong class="cards__paragraph--strong"
+                      >sin intereses</strong
+                    >
+                    de
+                    <strong class="cards__paragraph--strong">$200 USD</strong>
+                    con tarjeta débito o crédito.
+                  </p>
+                  <a href="#" class="cards__cta">Conoce más.</a>
+                </div>
+              </div>
+            </div>
+            <!-- Caracteristicas -->
+            <ul class="cards__caracteristicas">
+              <li class="cards__item">
+                <i class="cards__check fas fa-check"></i>
+                <p class="card__text">Eventos exclusivos en Ismac Online</p>
+              </li>
+              <li class="cards__item">
+                <i class="cards__check fas fa-check"></i>
+                <p class="card__text">Más de 1000 cursos y 21 escuelas</p>
+              </li>
+              <li class="cards__item">
+                <i class="cards__check fas fa-check"></i>
+                <p class="card__text">
+                  Certificado digital de cursos y escuelas
+                </p>
+              </li>
+              <li class="cards__item">
+                <i class="cards__check fas fa-check"></i>
+                <p class="card__text">
+                  Certificados físicos para rutas de perfil profesional
+                </p>
+              </li>
+              <li class="cards__item">
+                <i class="cards__check fas fa-check"></i>
+                <p class="card__text">English Academy y Escuela de Startups</p>
+              </li>
+              <li class="cards__item">
+                <i class="cards__check fas fa-check"></i>
+                <p class="card__text">Descarga clases en la App</p>
               </li>
             </ul>
-
-            <a href="#" class="container__cta">Obtener</a>
-          </div>
-        </article>
+          </article>
+        </div>
       </section>
     </main>
     <!-- FontAwesome -->
