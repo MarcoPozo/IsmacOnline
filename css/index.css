@@ -390,7 +390,7 @@ h1 {
   gap: 1.5rem;
   display: grid;
   grid-auto-rows: 105px;
-  grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .carreras__card {
