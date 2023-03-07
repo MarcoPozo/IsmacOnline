@@ -213,8 +213,11 @@ h1 {
   height: 450px;
   overflow: hidden;
   position: relative;
+
   background: url(../images/bannerSoftware.png);
+  background-repeat: no-repeat;
   background-position: right;
+  background-size: cover;
 }
 
 .hero__container {
@@ -391,14 +394,15 @@ h1 {
 }
 
 .multimedia__paragraph {
-  width: 680px;
+  width: 50%;
+  text-align: justify;
   font-size: 1.2rem;
   line-height: 1.7rem;
   padding-right: 32px;
 }
 
 .multimedia__reproductor {
-  width: 500px;
+  width: 600px;
   height: 100%;
 }
 
